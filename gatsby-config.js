@@ -13,14 +13,30 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+
     `gatsby-transformer-sharp`,
-     `gatsby-transformer-remark`,
+     {resolve: `gatsby-transformer-remark`,
+     options: {
+       plugins: [`gatsby-remark-copy-linked-files`]}},
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         //path: path.join(__dirname, `src`, `images`),
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
         // name: `images`,
         // path: `${__dirname}/src/images`,
       },

@@ -1,25 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import "../styles.css"
 
 
 export default ({ data }) => (
   <Layout>
     <h1>Contact </h1>
 
-    <p>Thanks for reading my blog. I hope it makes you smile.</p>
-
-    <p>
-    In college, I studied pharmacology and neurobiology in hopes to become a
-    pharmacist. It was only after getting accepted into pharmacy school and
+    <p> If you enjoyed reading, want to collaborate, or any other
+      inqueries please contact me through email. I'm always looking for
+      someone to try new desserts, study algorithms, or have coffee dates with.
     </p>
+    <form action="https://formspree.io/lisaxjo@gmail.com" method="POST">
+      <label>Email</label>
+      <input type="email" name="_replyto" placeholder="averagejo@example.com"/>
+      <label> Message</label>
+      <input type="text" name="name" placeholder="I <3 Bubble Tea"/>
+      <button className="submitBtn" type="submit">Send</button>
+    </form>
 
-    <p>
-      My favorite dog is a corgi. The project I am most proud is an AR mobile game
-      called Apple Crumble. I draw inspiration from art galleries, nature, and observing world around me.
-    </p>
 
-    <p> Cheers! </p>
   </Layout>
 )
 

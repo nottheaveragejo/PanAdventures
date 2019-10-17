@@ -66,11 +66,15 @@ title and header styling */
 .siteName{
  font-size: 40px;
  color: 	#893d67	;
+ height:100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 .linkHeader{
   font-size: 15px;
   text-decoration: none;
-  color: 		#D8D8D8;
+  color: 	#484848;
   align-self: center;
   padding-right: 5px;
 }
@@ -78,14 +82,13 @@ title and header styling */
 .header{
   display: flex;
   justify-content: center;
-  background-color: #c16c32;
+  border-top: 2px solid #989898;
+  border-bottom: 2px solid #989898;
   height: 60px;
   align-items: center;
-  align-content: center;
+  justify-content: space-around;
 }
-.headerSpace {
-  flex:10;
-}
+
 
 /* content wrapper */
 
