@@ -60,10 +60,74 @@ strong {
 dfn {
   font-style: italic;
 }
+/*
+title and header styling */
+
+.siteName{
+ font-size: 40px;
+ color: 	#893d67	;
+}
+.linkHeader{
+  font-size: 15px;
+  text-decoration: none;
+  color: 		#D8D8D8;
+  align-self: center;
+  padding-right: 5px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: #c16c32;
+  height: 60px;
+  align-items: center;
+  align-content: center;
+}
+.headerSpace {
+  flex:10;
+}
+
+/* content wrapper */
+
+.aboutPostsContainer{
+ /* border: 10px solid red; */
+ display: flex;
+}
+
+.aboutContainer{
+  flex:1;
+  order:2;
+}
+
+.postsContainerMain{
+  flex:2;
+  order:1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .aboutPostsContainer {
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .aboutContainer{
+    order:2;
+    display: none;
+  }
+  /* .postsContainerMain{
+    order:1;
+  }  */
+}
+
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -620,3 +684,4 @@ pre tt:after {
     font-size: 100%;
   }
 }
+

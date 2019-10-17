@@ -1,21 +1,67 @@
+
 import React from "react"
-import { Link } from "gatsby"
-
+import {Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import About from "../components/about"
+import '../styles.css'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default ({ data }) => {
+  return (
+    <Layout>
+      <div className="frontPageWrapper">
+        <div className="postsWrapper">
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}
+          className="postStyling">
+           <Link
+              to={node.fields.slug}
+              className="PostTitle">
+            <h3
+              className="title"
+            >
+              {node.frontmatter.title}{" "}
+              <span className="date"
+              >
+                — {node.frontmatter.date}
+              </span>
+            </h3>
+            </Link>
+            <p>{node.excerpt}</p>
+            <div className="ReadMoreBtn">
+            <Link
+              to={node.fields.slug}
+              className="ReadMore"
+              >
+              READ MORE
+            </Link>
+            </div>
+            <hr></hr>
+          </div>
+        ))}
+        </div>
+      </div>
+    </Layout>
+  )
+}
 
-export default IndexPage
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`

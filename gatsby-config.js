@@ -1,20 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `The Adventures of Pan and Ice`,
+    description: `The Story of Two Bears and a Dream`,
     author: `@gatsbyjs`,
   },
   plugins: [
+   {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        //path: path.join(__dirname, `src`, `images`),
+        path: `${__dirname}/src/`,
+        // name: `images`,
+        // path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -32,3 +43,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+

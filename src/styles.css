@@ -1,0 +1,103 @@
+.frontPageWrapper{
+	display: flex;
+	flex-direction: row-reverse;
+/*	width: 80vw;*/
+}
+
+.postsWrapper{
+	/*width: 80%;*/
+	/* flex: 2; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 100px;
+}
+
+
+.about{
+	/* flex: 1; */
+	min-width: 300px;
+	border: 5px solid #989898;
+	/*width: 20%;*/
+	justify-content: content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p{
+	text-align: center;
+}
+.about h1 {
+	font-size: 38px;
+	font-style: italic;
+	text-align: center;
+	color:#6c307c;
+}
+
+.about img {
+	 border-radius: 10%;
+}
+
+.aboutPic{
+	 border-radius: 10%;
+}
+.date{
+	color: 	#585858;
+	font-size:  15px;
+}
+
+.PostTitle{
+	/* border: 1px solid purple; */
+	text-decoration: none;
+	color: #282828;
+}
+
+
+.title{
+	font-size: 35px;
+	color:	#893d67;
+}
+
+.ReadMore{
+	text-decoration: none;
+	color:	#F0F0F0;
+}
+.ReadMoreBtn{
+	width: 120px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	background-color: #505050;
+	border: 2px solid 	#D0D0D0;
+	margin-bottom: 5px;
+}
+
+.ReadMoreBtn:hover {
+	background-color: #9f4951;
+}
+@media (max-width:300px) {
+	.about{width: 100%;}
+  }
+
+
+.postStyling{
+	margin-bottom: 20px;
+}
+/*
+technology styling */
+.technology {
+	list-style-type: none;
+	display: flex;
+flex-wrap: wrap;
+	/* border: 1px solid red; */
+	justify-content: center;
+}
+
+.technology li {
+	text-decoration: none;
+}
+.readMoreTechHR{
+	color: red;
+}
