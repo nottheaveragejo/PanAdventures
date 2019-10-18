@@ -36,6 +36,8 @@ p{
 	color:#6c307c;
 }
 
+
+
 .about img {
 	 border-radius: 10%;
 }
@@ -48,6 +50,15 @@ p{
 	font-size:  15px;
 }
 
+
+.iconContainer * {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.iconContainer *:hover{
+	color:	#c16c32;
+}
 .PostTitle{
 	/* border: 1px solid purple; */
 	text-decoration: none;
@@ -79,12 +90,6 @@ p{
 }
 
 
-@media (min-width:300px) {
-	.about{
-		width: 100%;
-	}
-  }
-
 
 .postStyling{
 	margin-bottom: 20px;
@@ -95,7 +100,6 @@ technology styling */
 	list-style-type: none;
 	display: flex;
 flex-wrap: wrap;
-	/* border: 1px solid red; */
 	justify-content: center;
 }
 
@@ -103,13 +107,19 @@ flex-wrap: wrap;
 	text-decoration: none;
 }
 /* contact styling */
+.formContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 form{
 	display: flex;
 	flex-direction: column;
-	min-width: 300px;
+	/* min-width: 300px; */
+	width: 90%;
 	height: 400px;
-	border: 1px solid red;
+	margin-top: 5px;
 	background-color: #9f4951;
 	align-content: center;
 	align-items: center;

@@ -4,8 +4,9 @@ import Layout from "../components/layout"
 import "../styles.css"
 
 
-export default ({ data }) => (
+export default () => (
   <Layout>
+    <div className="formContainer">
     <h1>Contact </h1>
 
     <p> If you enjoyed reading, want to collaborate, or any other
@@ -19,8 +20,7 @@ export default ({ data }) => (
       <input type="text" name="name" placeholder="I <3 Bubble Tea"/>
       <button className="submitBtn" type="submit">Send</button>
     </form>
-
-
+    </div>
   </Layout>
 )
 

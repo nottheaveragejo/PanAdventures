@@ -31,12 +31,7 @@ class Header extends Component {
   }
   render (){
     return(
-  <header
-    // style={{
-    //   background: '#b2dfe1',
-    //   marginBottom: `1.45rem`,
-    // }}
-  >
+  <header>
     <div>
       <h1
         className ="header">
@@ -59,15 +54,14 @@ class Header extends Component {
         >
           ABOUT
         </Link>
-        <Link
-          to="https://nottheaveragejo.github.io/personal-website/"
+        <a href="https://nottheaveragejo.github.io/personal-website/"
           className ="linkHeader"
           onMouseOut={() => this.mouseOut()}
           onMouseOver={() => this.mouseOver()}
           style={{color : this.state.color}}
-        >
-          PORTFOLIO
-        </Link>
+        > PORTFOLIO
+        </a>
+
         <Link
           to="/contact"
           className ="linkHeader"

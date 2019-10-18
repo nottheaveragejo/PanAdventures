@@ -31,12 +31,12 @@ const Layout = ({ children }) => {
       <Header  />
       <div >
       <div className = "aboutPostsContainer">
-      <About
-      className="aboutContainer"
-      ></About>
       <div className="postsContainerMain">
       <main >{children}</main>
       </div>
+      <About
+      className="aboutContainer"
+      ></About>
       </div>
         <footer>
           © {new Date().getFullYear()}, Built with Love, Creator Lisa J0
