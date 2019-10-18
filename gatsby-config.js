@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/PanAdventures",
   siteMetadata: {
     title: `The Adventures of Pan and Ice`,
     description: `The Story of Two Bears and a Dream`,
