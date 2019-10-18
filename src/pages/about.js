@@ -21,7 +21,7 @@ export default ({ data }) => (
     concert. All the mental blocks faded and the day after, I penned the first
     page. Pretty soon, I had a manuscript. But when I tried to get feedback for others
     to read it, I didn't have an audience. This was problematic, so I decided to
-    build my own writing platform where fellow writers can critique and review other'school work as well as receive feedback on their own. I was hooked. It was the beginning of my journey into software engineering, something I hope I can share with all of you.</p>
+    build my own writing platform where fellow writers can critique and review other's work as well as receive feedback on their own. I was hooked. It was the beginning of my journey into software engineering, something I hope I can share with all of you.</p>
 
     <p>
       Currently, I live in the heart of the village in NYC with plently of plants
