@@ -8,9 +8,8 @@ import './about.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import {faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab,faCoffee)
+// library.add(fab,faCoffee)
 const About = () => (
  <div className="about">
   <h1 classname="aboutName">About Pan (Lisa)</h1>
