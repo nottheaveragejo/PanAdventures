@@ -25,7 +25,7 @@ export default ({ data }) => (
 
     <p>
       Currently, I live in the heart of the village in NYC with plently of plants
-      and mementos of my travels. I think that noodles are the most underappreciated carb in existence and bike about 70 miles a week on a turkish green Brompton. When I'm not writing software and scripts, I'm working on my query letter for Overture.
+      and mementos of my travels. I think that noodles are the most under appreciated carb in existence and bike about 70 miles a week on a turkish green Brompton. When I'm not writing software and scripts, I'm working on my query letter for Overture.
     </p>
 
     <p>

@@ -54,7 +54,7 @@ class Header extends Component {
         >
           ABOUT
         </Link>
-        <a href="https://nottheaveragejo.github.io/personal-website/"
+        <a href="http://sunflower-website.herokuapp.com/"
           className ="linkHeader"
           onMouseOut={() => this.mouseOut()}
           onMouseOver={() => this.mouseOver()}
