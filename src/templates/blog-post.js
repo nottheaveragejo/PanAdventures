@@ -21,32 +21,34 @@ export default ({ data }) => {
 
 
 // export const query = graphql`
-// query($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug }, }) {
+//   query PostQuery($slug: String!) {
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
 //       html
 //       frontmatter {
 //         title
-//         date
+//         date(formatString: "MMM Do YYYY")
+
 //       }
 //     }
 //   }
+//  `
 
- // featuredImage {
-        //   childImageSharp {
-        //     fluid(maxWidth: 800) {
-        //       ...GatsbyImageSharpFluid
-        //     }
-        //   }
-        // }
-export const query = graphql`
-  query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        date(formatString: "MMM Do YYYY")
-
+export const pageQuery = graphql`
+  query BlogIndexQuery{
+      allMarkdownRemark
+      (sort: { fields: [frontmatter___date], order: DESC })
+      {
+        edges{
+          node{
+            id
+            frontmatter{
+              path
+              title
+              date
+              author
+            }
+          }
+        }
       }
     }
-  }
- `
+`
