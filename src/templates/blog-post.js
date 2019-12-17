@@ -20,33 +20,33 @@ export default ({ data }) => {
 
 
 
-// export const query = graphql`
-//   query PostQuery($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMM Do YYYY")
+export const query = graphql`
+  query PostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        date(formatString: "MMM Do YYYY")
 
-//       }
-//     }
-//   }
-//  `
-
-export const pageQuery = graphql`
-  query BlogIndexQuery{
-      allMarkdownRemark
-      (sort: { fields: [frontmatter___date], order: DESC })
-      {
-        edges{
-          node{
-            id
-            frontmatter{
-              title
-              date
-            }
-          }
-        }
       }
     }
-`
+  }
+ `
+
+// export const pageQuery = graphql`
+//   query BlogIndexQuery{
+//       allMarkdownRemark
+//       (sort: { fields: [frontmatter___date], order: DESC })
+//       {
+//         edges{
+//           node{
+//             id
+//             frontmatter{
+//               title
+//               date
+//             }
+//           }
+//         }
+//       }
+//     }
+// `
