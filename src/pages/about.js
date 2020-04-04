@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import awesomeImg from './lisa-profile.png'
+import awesomeImg from './tea.jpg'
 import "../styles.css"
 
 

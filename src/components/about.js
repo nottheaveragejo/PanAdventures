@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import ReactDOM from 'react-dom'
 import PropTypes from "prop-types"
 import React from "react"
-import awesomeImg from '../pages/blogPic.jpg'
+import awesomeImg from '../pages/train.jpg'
 import '../styles.css'
 import './about.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
